@@ -75,14 +75,6 @@ source dojo-kivy/bin/activate
    Found that training volume, longest run distance, and training duration significantly affect race outcomes.  
    https://pubmed.ncbi.nlm.nih.gov/32421886/
 
-3. **van Gent et al., 2007 – Incidence and Determinants of Lower Extremity Running Injuries in Long-Distance Runners: A Systematic Review**  
-   Running-related injuries are common, with novice runners at increased risk due to training errors and lack of adaptation.  
-   https://bjsm.bmj.com/content/41/8/469
-
-4. **Buist et al., 2010 – Effect of a Graded Training Program on the Incidence of Running-Related Injuries in Novice Runners**  
-   Novice runners are particularly susceptible to overuse injuries, especially during the first few weeks of training.  
-   https://pubmed.ncbi.nlm.nih.gov/19726739/
-
-5. **Videbæk et al., 2015 – Incidence of Running-Related Injuries in Different Types of Runners: A Systematic Review and Meta-Analysis**  
+3. **Videbæk et al., 2015 – Incidence of Running-Related Injuries in Different Types of Runners: A Systematic Review and Meta-Analysis**  
    Novice runners have a higher injury rate compared to recreational and experienced runners.  
    https://bjsm.bmj.com/content/49/8/511
