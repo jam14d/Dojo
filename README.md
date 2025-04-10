@@ -14,9 +14,10 @@ Currently, the interface is being built using the Kivy framework for Python.
 ---
 ## Environment Setup
 
+```bash
 python3 -m venv dojo-kivy
 source dojo-kivy/bin/activate
-
+```
 ---
 
 ## Core Functionality Design
