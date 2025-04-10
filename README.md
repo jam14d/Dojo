@@ -6,7 +6,7 @@ _Dojo_ is a half marathon training app being built in Python.
 
 I'm working to generate a personalized training plan that adjusts the training schedule based on:
 
-- Injury status (starting with shin splints)
+- Injury status 
 - Weekly energy levels
 
 Currently, the interface is being built using the Kivy framework for Python.
