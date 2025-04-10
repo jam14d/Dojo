@@ -1,4 +1,4 @@
-# Dojo: Training Plan App
+# Dojo: A Training App 
 
 ## Goal
 
