@@ -27,8 +27,8 @@ source dojo-kivy/bin/activate
 - Target race date
 - Current weekly mileage or running experience
 - Days per week available to run
-- Injury status (yes/no for shin splints)
-- Energy level for the current week (low / normal / high)
+- Injury status 
+- Energy level for the current week 
 
 ### Training Plan Generator
 
