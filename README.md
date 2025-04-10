@@ -2,12 +2,12 @@
 
 **Dojo** is a half marathon training app focused on mindful, adaptive training.
 
-The goal is to reduce the risk of overuse injuries—which are especially common in novice runners—by generating personalized training plans that adjust dynamically based on:
+The goal is to reduce the risk of overuse injuries——by generating personalized training plans that adjust dynamically based on:
 
 - **Injury status**
 - **Weekly energy levels**
 
-Beginner runners are particularly vulnerable to injuries such as shin splints, often caused by rapid increases in training volume or intensity. Dojo helps runners build up gradually and safely by tailoring their training to how their body feels each week.
+Novice runners are particularly vulnerable to injuries such as shin splints, often caused by rapid increases in training volume or intensity. Dojo helps runners build up gradually and safely by tailoring their training to how their body feels each week.
 
 The user interface is currently being developed using the **Kivy** framework in Python.
 
