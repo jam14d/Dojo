@@ -20,7 +20,7 @@ source dojo-kivy/bin/activate
 ```
 ---
 
-## Core Functionality Design
+## Core Functionality 
 
 ### User Inputs
 
