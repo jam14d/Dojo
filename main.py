@@ -1,19 +1,12 @@
 from training_data import training_plan
 from datetime import datetime
 
-def main():
-    # For Testing
-    test_profile = {
-        "name": "Test User",
-        "race_date": datetime.strptime("2025-06-01", "%Y-%m-%d"),
-        "weekly_mileage": 20.0,
-        "level": "intermediate",
-        "injuries": ["shin splints"],
-        "preferred_days": ["Mon", "Wed", "Fri"],
-    }
-
-    user_profile = test_profile  # Use test profile
-    # user_profile = get_user_input()  # <- Uncomment this to use real input
+def main(use_test_profile=False):
+    if use_test_profile:
+        from test_profiles import test_profile_basic
+        user_profile = test_profile_basic
+    else:
+        user_profile = get_user_input()
 
     training_plan = generate_training_plan(user_profile)
     training_plan = adjust_for_injuries(training_plan, user_profile['injuries'])
@@ -67,7 +60,6 @@ def calculate_weeks_until_race(race_date):
     today_date = datetime.today()
     delta = race_date - today_date
     weeks = delta.days // 7
-    print("Weeks until race:", weeks)
     return weeks
 
 def generate_training_plan(user_profile):
@@ -88,4 +80,4 @@ def display_plan(training_plan):
     pass
 
 if __name__ == "__main__":
-    main()
+    main(use_test_profile=True)  # Flip this when you're developing

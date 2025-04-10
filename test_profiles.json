@@ -1,0 +1,19 @@
+{
+    "basic_profile": {
+      "name": "Test User",
+      "race_date": "2025-06-01",
+      "weekly_mileage": 20.0,
+      "level": "intermediate",
+      "injuries": ["shin splints"],
+      "preferred_days": ["Mon", "Wed", "Fri"]
+    },
+    "advanced_profile": {
+      "name": "Speedy",
+      "race_date": "2025-08-01",
+      "weekly_mileage": 40.0,
+      "level": "advanced",
+      "injuries": [],
+      "preferred_days": ["Tue", "Thu", "Sat", "Sun"]
+    }
+  }
+  
