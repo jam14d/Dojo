@@ -1,8 +1,10 @@
-# Half Marathon Training Plan App – Project Overview
+# Dojo: Training Plan App
 
 ## Goal
 
-Build a Python-based app that generates a personalized training plan for a half marathon. The app should adjust the training schedule based on:
+_Dojo_ is a half marathon training app being built in Python. It's designed for runners like me who want to train smarter—not harder.
+
+I'm working to generate a personalized training plan that adjusts the training schedule based on:
 
 - Injury status (starting with shin splints)
 - Weekly energy levels
