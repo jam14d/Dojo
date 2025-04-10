@@ -1,12 +1,29 @@
 from training_data import training_plan
 from datetime import datetime
 
+def main():
+    # For Testing
+    test_profile = {
+        "name": "Test User",
+        "race_date": datetime.strptime("2025-06-01", "%Y-%m-%d"),
+        "weekly_mileage": 20.0,
+        "level": "intermediate",
+        "injuries": ["shin splints"],
+        "preferred_days": ["Mon", "Wed", "Fri"],
+    }
+
+    user_profile = test_profile  # Use test profile
+    # user_profile = get_user_input()  # <- Uncomment this to use real input
+
+    training_plan = generate_training_plan(user_profile)
+    training_plan = adjust_for_injuries(training_plan, user_profile['injuries'])
+    display_plan(training_plan)
+
+
 def get_user_input():
     print("Welcome to Dojo – your personal half-marathon coach!\n")
-
     name = input("What's your name? ")
 
-    # Get and parse race date
     while True:
         race_date_input = input("Enter your target race date (YYYY-MM-DD): ")
         try:
@@ -15,7 +32,6 @@ def get_user_input():
         except ValueError:
             print("Please enter the date in the correct format: YYYY-MM-DD")
 
-    # Get current weekly mileage
     while True:
         try:
             mileage = float(input("What's your current weekly mileage (in miles)? "))
@@ -23,7 +39,6 @@ def get_user_input():
         except ValueError:
             print("Please enter a number.")
 
-    # Experience level
     levels = ['beginner', 'intermediate', 'advanced']
     while True:
         level = input("What's your running level (beginner/intermediate/advanced)? ").lower()
@@ -31,11 +46,9 @@ def get_user_input():
             break
         print("Please choose from: beginner, intermediate, or advanced.")
 
-    # Injury history
     injuries = input("List any current or past injuries (comma-separated, or type 'none'): ")
     injury_list = [inj.strip().lower() for inj in injuries.split(",")] if injuries.lower() != 'none' else []
 
-    # Preferred running days
     preferred_days = input("Preferred days to run (e.g., Mon,Wed,Fri): ")
     preferred_days = [day.strip().capitalize() for day in preferred_days.split(",")]
 
@@ -50,28 +63,29 @@ def get_user_input():
 
     return user_profile
 
-
 def calculate_weeks_until_race(race_date):
-    # Determine how long the training plan should be
-    pass
+    today_date = datetime.today()
+    delta = race_date - today_date
+    weeks = delta.days // 7
+    print("Weeks until race:", weeks)
+    return weeks
 
 def generate_training_plan(user_profile):
-    # Build a personalized training schedule
-    pass
+    race_date = user_profile["race_date"]
+    weeks = calculate_weeks_until_race(race_date)
+    
+    # Temporary print just to confirm
+    print(f"Generating plan for {weeks} weeks...")
+
+    # Placeholder for now
+    return {"weeks": weeks, "plan": []}
+
 
 def adjust_for_injuries(training_plan, injury_history):
-    # Modify training for injuries
     pass
 
 def display_plan(training_plan):
-    # Print or export the plan
     pass
-
-def main():
-    user_profile = get_user_input()
-    training_plan = generate_training_plan(user_profile)
-    training_plan = adjust_for_injuries(training_plan, user_profile['injuries'])
-    display_plan(training_plan)
 
 if __name__ == "__main__":
     main()
