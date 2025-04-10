@@ -2,7 +2,7 @@
 
 ## Goal
 
-_Dojo_ is a half marathon training app being built in Python. It's designed for runners like me who want to train smarter—not harder.
+_Dojo_ is a half marathon training app being built in Python. 
 
 I'm working to generate a personalized training plan that adjusts the training schedule based on:
 
