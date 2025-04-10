@@ -35,7 +35,7 @@ source dojo-kivy/bin/activate
 - Base 12-week half marathon plan structure
 - Gradual weekly mileage increase with cutback weeks and tapering
 
-**Adjustments based on user input:**
+#### Adjustments based on user input:
 
 **Shin splints:**
 - Reduce mileage and/or intensity
