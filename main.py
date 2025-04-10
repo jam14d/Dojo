@@ -1,37 +1,77 @@
 from training_data import training_plan
-from visualization import plot_week_range_mileage
+from datetime import datetime
 
-def adjust_mileage(miles, adjust):
-    if isinstance(miles, (int, float)) and adjust:
-        return round(miles * 0.5, 1)
-    return miles
+def get_user_input():
+    print("Welcome to Dojo – your personal half-marathon coach!\n")
 
-def print_plan(adjust=False):
-    for week in training_plan:
-        print(f"Week {week['week']}:")
-        for day in ["tue", "wed", "thu", "sun"]:
-            miles = adjust_mileage(week.get(day), adjust)
-            print(f"  {day.capitalize()}: {miles} mi")
-        print()
+    name = input("What's your name? ")
 
-def get_range():
-    kind = input("View a week, range, or all? (single/range/all): ").strip().lower()
-    if kind == "all":
-        return None
-    if kind == "range":
-        start = int(input("Start week: "))
-        end = int(input("End week: "))
-        return (start, end)
-    if kind == "single":
-        week = int(input("Week: "))
-        return (week, week)
-    return get_range()
+    # Get and parse race date
+    while True:
+        race_date_input = input("Enter your target race date (YYYY-MM-DD): ")
+        try:
+            race_date = datetime.strptime(race_date_input, "%Y-%m-%d")
+            break
+        except ValueError:
+            print("Please enter the date in the correct format: YYYY-MM-DD")
+
+    # Get current weekly mileage
+    while True:
+        try:
+            mileage = float(input("What's your current weekly mileage (in miles)? "))
+            break
+        except ValueError:
+            print("Please enter a number.")
+
+    # Experience level
+    levels = ['beginner', 'intermediate', 'advanced']
+    while True:
+        level = input("What's your running level (beginner/intermediate/advanced)? ").lower()
+        if level in levels:
+            break
+        print("Please choose from: beginner, intermediate, or advanced.")
+
+    # Injury history
+    injuries = input("List any current or past injuries (comma-separated, or type 'none'): ")
+    injury_list = [inj.strip().lower() for inj in injuries.split(",")] if injuries.lower() != 'none' else []
+
+    # Preferred running days
+    preferred_days = input("Preferred days to run (e.g., Mon,Wed,Fri): ")
+    preferred_days = [day.strip().capitalize() for day in preferred_days.split(",")]
+
+    user_profile = {
+        "name": name,
+        "race_date": race_date,
+        "weekly_mileage": mileage,
+        "level": level,
+        "injuries": injury_list,
+        "preferred_days": preferred_days,
+    }
+
+    return user_profile
+
+
+def calculate_weeks_until_race(race_date):
+    # Determine how long the training plan should be
+    pass
+
+def generate_training_plan(user_profile):
+    # Build a personalized training schedule
+    pass
+
+def adjust_for_injuries(training_plan, injury_history):
+    # Modify training for injuries
+    pass
+
+def display_plan(training_plan):
+    # Print or export the plan
+    pass
+
+def main():
+    user_profile = get_user_input()
+    training_plan = generate_training_plan(user_profile)
+    training_plan = adjust_for_injuries(training_plan, user_profile['injuries'])
+    display_plan(training_plan)
 
 if __name__ == "__main__":
-    adjust = input("Shin splints? (yes/no): ").strip().lower() == "yes"
-    print_plan(adjust)
-
-    show = input("Visualize? (yes/no): ").strip().lower() == "yes"
-    if show:
-        week_range = get_range()
-        plot_week_range_mileage(training_plan, week_range, adjust)
+    main()
