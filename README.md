@@ -1,5 +1,4 @@
-# Dojo: A Training App 
-
+Dojo: Adaptive, Injury-Preventive Half Marathon Trainer
 ## Goal
 
 **Dojo** is a half marathon training app focused on **mindful, adaptive training**.
