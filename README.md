@@ -9,11 +9,17 @@ I'm working to generate a personalized training plan that adjusts the training s
 - Injury status (starting with shin splints)
 - Weekly energy levels
 
-The initial version will run as a script. Future versions may include a GUI or web interface.
+Currently, the interface is being built using the Kivy framework for Python.
+
+---
+## Environment Setup
+
+python3 -m venv dojo-kivy
+source dojo-kivy/bin/activate
 
 ---
 
-## Phase 1: Core Functionality 
+## Core Functionality Design
 
 ### User Inputs
 
@@ -42,37 +48,11 @@ The initial version will run as a script. Future versions may include a GUI or w
 
 ### Output
 
-- Display weekly or daily schedule in terminal
-- Optionally save to a `.txt` or `.csv` file
-
-### Python Features to Use
-
-- `datetime` module for calculating weeks
-- Lists/dictionaries for schedule management
-- Conditional logic for plan adjustments
-- File writing for exporting plans
+- Display a weekly training schedule 
 
 ---
 
-## Phase 2: Enhanced Features
-
-- Include pace recommendations based on user input (e.g., recent race times)
-- Track persistent injuries and suggest rest if not improving
-- Save and reload user data or training progress
-
----
-
-## Phase 3: Interface Development
-
-Once the logic is solid, explore building a user interface:
-
-- Desktop GUI using Tkinter
-- Web interface using Flask or FastAPI
-- (Advanced/future) Mobile app using React Native, Flutter, or Swift
-
----
-
- ## Baseline Training Structure (According to Refs)
+ ## Baseline Training Structure 
  - Start at 10–15 miles/week (beginner level)
  - Increase mileage by ~10% each week
  - Cutback every 4th week by ~20% (recovery week)
